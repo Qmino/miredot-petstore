@@ -52,4 +52,13 @@ public interface MireDotStatusCodesTestService {
     @Path("/statusCodes/custom/simple")
     public void customStatusCodeTestSimple() throws AuthorizationException;
 
+    /**
+     * Testing the manual status code text by specifying the @statuscode tag
+     * @summary Testing the manual status code text
+     * @statuscode 418 This service is a teapot
+     */
+    @DELETE
+    @Path("/statusCodes/manual")
+    public void manualStatusCodeTest();
+
 }
