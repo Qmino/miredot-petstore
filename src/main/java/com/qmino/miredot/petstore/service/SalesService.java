@@ -12,6 +12,7 @@ import javax.ws.rs.core.MediaType;
  * <i>Creation-Time</i>:  14:39<br>
  * </p>
  *
+ * @servicetag sales
  * @author Jeroen
  * @author <a href="http://www.qmino.com">Qmino bvba</a>
  */
@@ -38,4 +39,16 @@ public interface SalesService {
     @Path("/order/{id}")
     @Produces({MediaType.APPLICATION_JSON})
     public Order getOrder(@PathParam("id") Long orderId);
+
+    /**
+     * Get the status of the order with specified id
+     * @summary Get the order status
+     * @servicetag status
+     * @param orderId The order id
+     * @return The status of the order with specified id
+     */
+    @GET
+    @Path("/order/{id}/status")
+    @Produces(MediaType.TEXT_PLAIN)
+    public String getOrderStatus(@PathParam("id") Long orderId);
 }
