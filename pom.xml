@@ -6,7 +6,7 @@
     <groupId>com.qmino</groupId>
     <artifactId>miredot-petstore</artifactId>
 
-    <version>1.0.0.0-SNAPSHOT</version>
+    <version>1.1.0.0-SNAPSHOT</version>
     <name>MireDot Petstore</name>
 
     <properties>
@@ -21,21 +21,39 @@
             <url>http://nexus.qmino.com/content/repositories/miredot-snapshots</url>
         </pluginRepository>
     </pluginRepositories>
-    
+
+    <repositories>
+        <repository>
+            <id>miredot-snapshots</id>
+            <name>MireDot Snapshots</name>
+            <url>http://nexus.qmino.com/content/repositories/miredot-snapshots</url>
+        </repository>
+    </repositories>
+
     <dependencies>
          <dependency>
              <groupId>org.jboss.resteasy</groupId>
              <artifactId>jaxrs-api</artifactId>
              <version>2.3.2.Final</version>
          </dependency>
-     </dependencies>
+        <dependency>
+            <groupId>com.qmino</groupId>
+            <artifactId>miredot-annotations</artifactId>
+            <version>1.1-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-annotations</artifactId>
+            <version>2.2.0</version>
+        </dependency>
+    </dependencies>
 
     <build>
         <plugins>
             <plugin>
                 <groupId>com.qmino</groupId>
                 <artifactId>miredot-maven-plugin</artifactId>
-                <version>1.0-SNAPSHOT</version>
+                <version>1.1-SNAPSHOT</version>
                 <executions>
                     <execution>
                         <goals>
@@ -82,6 +100,13 @@
                     <htmlIntro> <!-- default = project_root/miredot.htmlintro.html -->
                         petstoreRestApi.html
                     </htmlIntro>
+                    <visibility>
+                        <GETTER>PUBLIC_ONLY</GETTER>
+                        <IS_GETTER>PUBLIC_ONLY</IS_GETTER>
+                        <SETTER>NON_PRIVATE</SETTER>
+                        <CREATOR>PUBLIC_ONLY</CREATOR>
+                        <FIELD>PUBLIC_ONLY</FIELD>
+                    </visibility>
                 </configuration>
             </plugin>
             <plugin>
