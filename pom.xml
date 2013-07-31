@@ -107,6 +107,11 @@
                         <CREATOR>PUBLIC_ONLY</CREATOR>
                         <FIELD>PUBLIC_ONLY</FIELD>
                     </visibility>
+                    <title>
+                        <strategy>tag: summary</strategy>
+                        <strategy>tag: title</strategy>
+                        <strategy>firstsentence</strategy>
+                    </title>
                 </configuration>
             </plugin>
             <plugin>
