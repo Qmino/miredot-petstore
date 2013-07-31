@@ -1,11 +1,20 @@
 package com.qmino.miredot.petstore.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonSubTypes;
+import com.fasterxml.jackson.annotation.JsonTypeInfo;
+
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
 import java.util.ArrayList;
 import java.util.List;
 
 @XmlRootElement
+@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.PROPERTY, property = "subCategory")
+@JsonSubTypes({
+       @JsonSubTypes.Type(name = "dogs", value = DogCategory.class),
+       @JsonSubTypes.Type(name = "cats", value = CatCategory.class)
+})
 public class Category {
 
     // ======================================
@@ -16,6 +25,7 @@ public class Category {
     private String name;
     private String description;
     @XmlTransient
+    @JsonIgnore
     private List<Product> products;
 
     // ======================================

@@ -80,40 +80,17 @@ public interface MireDotParamsTestService {
     );
 
     /**
-     * Testing the header params.
-     * @summary Testing the header params
-     * @param session A value that's sent in a header
+     * Testing matrix, form, cookie and header params.
+     * @summary Testing matrix, form, cookie and header params
+     * @param matrix A value that's stored in a matrix param
+     * @param form A value that's stored in a form param
+     * @param cookie A value that's stored in a cookie
+     * @param header A value that's sent in a header
      */
     @DELETE
-    @Path("/headerparams/")
-    public void headerParams(@HeaderParam("session") String session);
-
-    /**
-     * Testing the cookie params.
-     * @summary Testing the cookie params
-     * @param session A value that's stored in a cookie
-     */
-    @DELETE
-    @Path("/cookieparams/")
-    public void cookieParams(@CookieParam("session") String session);
-
-    /**
-     * Testing matrix params.
-     * @summary Testing matrix params
-     * @param author The person who made something
-     * @param country The country where the person is from
-     */
-    @DELETE
-    @Path("/matrixparams/")
-    public void matrixParams(@MatrixParam("author") String author, @MatrixParam("country") String country);
-
-    /**
-     * Testing form params.
-     * @summary Testing form params
-     * @param author The person who made something
-     * @param country The country where the person is from
-     */
-    @DELETE
-    @Path("/formparams/")
-    public void formParams(@FormParam("author") String author, @FormParam("country") String country);
+    @Path("/params/")
+    public void headerParams(@MatrixParam("author") String matrix,
+                             @FormParam("author") String form,
+                             @CookieParam("cookie") String cookie,
+                             @HeaderParam("header") String header);
 }
