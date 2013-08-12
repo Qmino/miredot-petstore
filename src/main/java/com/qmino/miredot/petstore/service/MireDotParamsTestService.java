@@ -44,7 +44,7 @@ public interface MireDotParamsTestService {
     @Consumes(MediaType.TEXT_PLAIN)
     @Path("/enum/{creditCardType}")
     public CreditCardType testEnum(
-            @PathParam("creditCardTypePath") CreditCardType creditCardTypePath,
+            @PathParam("creditCardType") CreditCardType creditCardTypePath,
             @QueryParam("creditCardTypeQuery") CreditCardType creditCardTypeQuery,
             @FormParam("creditCardTypeForm") CreditCardType creditCardTypeForm,
             @CookieParam("creditCardTypeCookie") CreditCardType creditCardTypeCookie,
@@ -70,7 +70,7 @@ public interface MireDotParamsTestService {
     @Consumes(MediaType.TEXT_PLAIN)
     @Path("/list/{list}")
     public List<String> testList(
-            @PathParam("listPath") List<String> listPath,
+            @PathParam("list") List<String> listPath,
             @QueryParam("listQuery") List<String> listQuery,
             @FormParam("listForm") List<String> listForm,
             @CookieParam("listCookie") List<String> listCookie,
