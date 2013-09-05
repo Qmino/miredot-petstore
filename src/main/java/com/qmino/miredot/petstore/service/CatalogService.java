@@ -1,5 +1,6 @@
 package com.qmino.miredot.petstore.service;
 
+import com.qmino.miredot.annotations.BodyType;
 import com.qmino.miredot.annotations.ReturnType;
 import com.qmino.miredot.petstore.domain.Category;
 import com.qmino.miredot.petstore.domain.Item;
@@ -25,7 +26,7 @@ import java.util.List;
 public interface CatalogService {
 
     /**
-     * Get all categories
+     * Get all categories. See also {@link #findCategory(Long)}
      * @summary Get all categories
      * @return All categories
      */
@@ -35,7 +36,7 @@ public interface CatalogService {
     public List<Category> findAllCategories();
 
     /**
-     * Get the category with the specified id
+     * Get the category with the specified {@param categoryId}.
      * @summary Get the category with the specified id
      * @param categoryId The category id
      * @return The category with the specified id
@@ -78,12 +79,13 @@ public interface CatalogService {
     /**
      * Get all products
      * @summary Get all products
+     * @param minPrice The minimal price for a product to be included in the result.
      * @return All products
      */
     @GET
     @Path("/product")
     @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
-    public List<Product> findAllProducts();
+    public List<Product> findAllProducts(@QueryParam("minPrice") @DefaultValue("0") Double minPrice);
 
     /**
      * Get the product with the specified id
@@ -178,7 +180,7 @@ public interface CatalogService {
     public void removeItem(@PathParam("id") Long itemId);
 
     /**
-     * Illustrating the usage of @ReturnType
+     * Illustrating the usage of {@code @ReturnType}
      * @summary @ReturnType usage
      * @param itemId The id of the item to get some response from
      * @return A list of MyResponse encapsulated in a javax.ws.rs.core.Response object
@@ -187,4 +189,17 @@ public interface CatalogService {
     @Path("/item/response/{id}")
     @ReturnType("java.util.List<com.qmino.miredot.petstore.domain.MyResponse>")
     public Response getResponse(@PathParam("id") Long itemId);
+
+    /**
+     * Illustrating the usage of {@code @ReturnType} (void) and {@code @BodyType}.
+     * @summary @ReturnType(void) and @BodyType usage.
+     * @param myJson The address.
+     * @return A list of MyResponse encapsulated in a javax.ws.rs.core.Response object
+     * @statuscode 201 The item has been created.
+     */
+    @POST
+    @Path("/item/response/")
+    @ReturnType("java.lang.Void") // We won't return anything but need the response object to set the http status code.
+    @BodyType("com.qmino.miredot.petstore.domain.Address") // We'll parse the json manually
+    public Response putSomething(String myJson);
 }
