@@ -1,5 +1,6 @@
 package com.qmino.miredot.petstore.service;
 
+import com.qmino.miredot.annotations.ReturnType;
 import com.qmino.miredot.petstore.domain.Category;
 import com.qmino.miredot.petstore.domain.Item;
 import com.qmino.miredot.petstore.domain.Product;
@@ -7,6 +8,7 @@ import com.qmino.miredot.petstore.exceptions.AuthorizationException;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
 import java.util.List;
 
 /**
@@ -66,7 +68,6 @@ public interface CatalogService {
 
     /**
      * Deletes category with given id. Only categories that apply to no products can be deleted.
-     * @summary Delete category with given id
      * @param categoryId The id of the category to be deleted
      * @throws AuthorizationException The user is not authorized to delete this category.
      */
@@ -175,4 +176,15 @@ public interface CatalogService {
     @DELETE
     @Path("/item/{id}")
     public void removeItem(@PathParam("id") Long itemId);
+
+    /**
+     * Illustrating the usage of @ReturnType
+     * @summary @ReturnType usage
+     * @param itemId The id of the item to get some response from
+     * @return A list of MyResponse encapsulated in a javax.ws.rs.core.Response object
+     */
+    @GET
+    @Path("/item/response/{id}")
+    @ReturnType("java.util.List<com.qmino.miredot.petstore.domain.MyResponse>")
+    public Response getResponse(@PathParam("id") Long itemId);
 }
