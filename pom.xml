@@ -6,7 +6,7 @@
     <groupId>com.qmino</groupId>
     <artifactId>miredot-petstore</artifactId>
 
-    <version>1.1.0.0</version>
+    <version>1.2.0.0</version>
     <name>MireDot Petstore</name>
 
     <properties>
@@ -39,7 +39,7 @@
         <dependency>
             <groupId>com.qmino</groupId>
             <artifactId>miredot-annotations</artifactId>
-            <version>1.1</version>
+            <version>1.2</version>
         </dependency>
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
@@ -53,7 +53,7 @@
             <plugin>
                 <groupId>com.qmino</groupId>
                 <artifactId>miredot-maven-plugin</artifactId>
-                <version>1.1</version>
+                <version>1.2</version>
                 <executions>
                     <execution>
                         <goals>
