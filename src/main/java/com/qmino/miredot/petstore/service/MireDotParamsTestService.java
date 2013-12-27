@@ -20,6 +20,7 @@ import java.util.List;
 public interface MireDotParamsTestService {
     /**
      * Deletes item with given id.
+     *
      * @summary Delete item with given id
      * @deprecated This method is deprecated. Use something else.
      */
@@ -29,15 +30,16 @@ public interface MireDotParamsTestService {
 
     /**
      * Testing enums
-     * @param creditCardTypePath a credit card type
-     * @param creditCardTypeQuery a credit card type
-     * @param creditCardTypeForm a credit card type
+     *
+     * @param creditCardTypePath   a credit card type
+     * @param creditCardTypeQuery  a credit card type
+     * @param creditCardTypeForm   a credit card type
      * @param creditCardTypeCookie a credit card type
      * @param creditCardTypeHeader a credit card type
      * @param creditCardTypeMatrix a credit card type
-     * @param creditCardTypeBody a credit card type
-     * @summary Testing enums
+     * @param creditCardTypeBody   a credit card type
      * @return a credit card type
+     * @summary Testing enums
      */
     @POST
     @Produces(MediaType.TEXT_PLAIN)
@@ -55,15 +57,16 @@ public interface MireDotParamsTestService {
 
     /**
      * Testing lists
-     * @param listPath a list of strings
-     * @param listQuery a list of strings
-     * @param listForm a list of strings
+     *
+     * @param listPath   a list of strings
+     * @param listQuery  a list of strings
+     * @param listForm   a list of strings
      * @param listCookie a list of strings
      * @param listHeader a list of strings
      * @param listMatrix a list of strings
-     * @param listBody a list of strings
-     * @summary Testing lists
+     * @param listBody   a list of strings
      * @return a list of strings
+     * @summary Testing lists
      */
     @POST
     @Produces(MediaType.TEXT_PLAIN)
@@ -81,11 +84,12 @@ public interface MireDotParamsTestService {
 
     /**
      * Testing matrix, form, cookie and header params.
-     * @summary Testing matrix, form, cookie and header params
+     *
      * @param matrix A value that's stored in a matrix param
-     * @param form A value that's stored in a form param
+     * @param form   A value that's stored in a form param
      * @param cookie A value that's stored in a cookie
      * @param header A value that's sent in a header
+     * @summary Testing matrix, form, cookie and header params
      */
     @DELETE
     @Path("/params/")

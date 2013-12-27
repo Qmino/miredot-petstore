@@ -8,8 +8,9 @@ public interface MireDotWarningsTestService {
 
     /**
      * This method has no @summary tag.
-     * @author Jeroen
+     *
      * @return Nothing meaningful.
+     * @author Jeroen
      */
     @GET
     @Path("/missing/summary")
@@ -18,8 +19,9 @@ public interface MireDotWarningsTestService {
 
     /**
      * This method has no @author tag
-     * @summary This method has no @author tag
+     *
      * @return Nothing meaningful.
+     * @summary This method has no @author tag
      */
     @GET
     @Path("/missing/author")
@@ -27,9 +29,9 @@ public interface MireDotWarningsTestService {
     public String missingAuthor();
 
     /**
+     * @return Nothing meaningful.
      * @summary This method has no Interface Documentation
      * @author Jeroen
-     * @return Nothing meaningful.
      */
     @GET
     @Path("/missing/interface")
@@ -38,6 +40,7 @@ public interface MireDotWarningsTestService {
 
     /**
      * This method has missing @param and @return tags
+     *
      * @summary This method has missing @param and @return tags
      * @author Jeroen
      */
@@ -48,9 +51,10 @@ public interface MireDotWarningsTestService {
 
     /**
      * This method has no @throws tag
+     *
+     * @return Nothing meaningful.
      * @summary This method has no @throws tag
      * @author Jeroen
-     * @return Nothing meaningful.
      */
     @GET
     @Path("/missing/throws")
@@ -59,9 +63,10 @@ public interface MireDotWarningsTestService {
 
     /**
      * This method has no @Produces annotation
+     *
+     * @return Nothing meaningful.
      * @summary This method has no @Produces annotation
      * @author Jeroen
-     * @return Nothing meaningful.
      */
     @GET
     @Path("/missing/produces")
@@ -69,9 +74,10 @@ public interface MireDotWarningsTestService {
 
     /**
      * This method has no @Consumes annotation
+     *
+     * @param name Any name will do
      * @summary This method has no @Consumes annotation
      * @author Jeroen
-     * @param name Any name will do
      */
     @POST
     @Path("/missing/consumes")

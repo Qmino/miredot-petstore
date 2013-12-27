@@ -19,6 +19,7 @@ import javax.ws.rs.Path;
 public interface MireDotStatusCodesTestService {
     /**
      * Testing the default status code text by not specifying the @throws param
+     *
      * @summary Testing the default status code text
      */
     @DELETE
@@ -27,8 +28,9 @@ public interface MireDotStatusCodesTestService {
 
     /**
      * Testing the default status code text by specifying the @throws param and no description.
-     * @summary Testing the default status code text
+     *
      * @throws AuthorizationException
+     * @summary Testing the default status code text
      */
     @DELETE
     @Path("/statusCodes/default/empty")
@@ -36,8 +38,9 @@ public interface MireDotStatusCodesTestService {
 
     /**
      * Testing the custom status code text by specifying the @throws param with the FQN of the exception.
+     *
+     * @throws com.qmino.miredot.petstore.exceptions.AuthorizationException Custom status code text.
      * @summary Testing the custom status code text (FQN)
-     * @throws com.qmino.miredot.petstore.exceptions.AuthorizationException  Custom status code text.
      */
     @DELETE
     @Path("/statusCodes/custom/fqn")
@@ -45,8 +48,9 @@ public interface MireDotStatusCodesTestService {
 
     /**
      * Testing the custom status code text by specifying the @throws param with the simple name of the exception.
-     * @summary Testing the custom status code text
+     *
      * @throws AuthorizationException Custom status code text.
+     * @summary Testing the custom status code text
      */
     @DELETE
     @Path("/statusCodes/custom/simple")
@@ -54,6 +58,7 @@ public interface MireDotStatusCodesTestService {
 
     /**
      * Testing the manual status code text by specifying the @statuscode tag
+     *
      * @summary Testing the manual status code text
      * @statuscode 418 This service is a teapot
      */

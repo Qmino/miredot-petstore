@@ -12,17 +12,18 @@ import javax.ws.rs.core.MediaType;
  * <i>Creation-Time</i>:  14:39<br>
  * </p>
  *
- * @servicetag sales
  * @author Jeroen
  * @author <a href="http://www.qmino.com">Qmino bvba</a>
+ * @servicetag sales
  */
 @Path("/sales")
 public interface SalesService {
     /**
      * Get the orders of a customer
-     * @summary Get the orders of a customer
+     *
      * @param customerId The id of the customer to get the orders for
      * @return All orders of the customer with specified id
+     * @summary Get the orders of a customer
      */
     @GET
     @Path("/order")
@@ -31,9 +32,10 @@ public interface SalesService {
 
     /**
      * Get the order with the specified id
-     * @summary Get the order with the specified id
+     *
      * @param orderId The order id
      * @return The order with the specified id
+     * @summary Get the order with the specified id
      */
     @GET
     @Path("/order/{id}")
@@ -42,10 +44,11 @@ public interface SalesService {
 
     /**
      * Get the status of the order with specified id
-     * @summary Get the order status
-     * @servicetag status
+     *
      * @param orderId The order id
      * @return The status of the order with specified id
+     * @summary Get the order status
+     * @servicetag status
      */
     @GET
     @Path("/order/{id}/status")
