@@ -39,7 +39,7 @@
         <dependency>
             <groupId>com.qmino</groupId>
             <artifactId>miredot-annotations</artifactId>
-            <version>1.2</version>
+            <version>1.3</version>
         </dependency>
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
@@ -53,7 +53,7 @@
             <plugin>
                 <groupId>com.qmino</groupId>
                 <artifactId>miredot-maven-plugin</artifactId>
-                <version>1.2.1</version>
+                <version>1.3</version>
                 <executions>
                     <execution>
                         <goals>
@@ -112,6 +112,10 @@
                         <strategy>tag: title</strategy>
                         <strategy>firstsentence</strategy>
                     </title>
+<outputFormats>
+        <outputFormat>Html</outputFormat>
+        <outputFormat>Docx</outputFormat>
+    </outputFormats>
                 </configuration>
             </plugin>
             <plugin>
