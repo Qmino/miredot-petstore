@@ -12,8 +12,8 @@ import java.util.List;
 @XmlRootElement
 @JsonTypeInfo(use = JsonTypeInfo.Id.MINIMAL_CLASS, include = JsonTypeInfo.As.PROPERTY, property = "type")
 @JsonSubTypes({
-       @JsonSubTypes.Type(value = DefaultProduct.class),
-       @JsonSubTypes.Type(value = PromotionalProduct.class)
+        @JsonSubTypes.Type(value = DefaultProduct.class),
+        @JsonSubTypes.Type(value = PromotionalProduct.class)
 })
 public class Product {
 

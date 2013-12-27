@@ -31,11 +31,11 @@
     </repositories>
 
     <dependencies>
-         <dependency>
-             <groupId>org.jboss.resteasy</groupId>
-             <artifactId>jaxrs-api</artifactId>
-             <version>2.3.2.Final</version>
-         </dependency>
+        <dependency>
+            <groupId>org.jboss.resteasy</groupId>
+            <artifactId>jaxrs-api</artifactId>
+            <version>2.3.2.Final</version>
+        </dependency>
         <dependency>
             <groupId>com.qmino</groupId>
             <artifactId>miredot-annotations</artifactId>
@@ -74,7 +74,8 @@
                         <statusCode>
                             <httpCode>401</httpCode>
                             <document>explicit: com.qmino.miredot.petstore.exceptions.AuthorizationException</document>
-                            <defaultMessage>The user is logged in, but is not authorized to use this service.</defaultMessage>
+                            <defaultMessage>The user is logged in, but is not authorized to use this service.
+                            </defaultMessage>
                         </statusCode>
                         <statusCode>
                             <httpCode>412</httpCode>
@@ -84,7 +85,8 @@
                         <statusCode>
                             <httpCode>500</httpCode>
                             <document>always</document>
-                            <defaultMessage>Internal server exception. The service call did not succeed.</defaultMessage>
+                            <defaultMessage>Internal server exception. The service call did not succeed.
+                            </defaultMessage>
                         </statusCode>
                     </statusCodes>
                     <issueHandling>
@@ -112,10 +114,10 @@
                         <strategy>tag: title</strategy>
                         <strategy>firstsentence</strategy>
                     </title>
-<outputFormats>
-        <outputFormat>Html</outputFormat>
-        <outputFormat>Docx</outputFormat>
-    </outputFormats>
+                    <outputFormats>
+                        <outputFormat>Html</outputFormat>
+                        <outputFormat>Docx</outputFormat>
+                    </outputFormats>
                 </configuration>
             </plugin>
             <plugin>

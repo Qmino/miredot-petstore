@@ -18,8 +18,9 @@ import javax.ws.rs.core.MediaType;
 public interface MireDotPathNotOnInterfaceTestService {
     /**
      * This method should be documented, although the interface has no @Path annotation.
-     * @summary Test @Path on method, but not on interface
+     *
      * @return Nothing meaningful.
+     * @summary Test @Path on method, but not on interface
      */
     @GET
     @Path("/test/path/notoninterface")
