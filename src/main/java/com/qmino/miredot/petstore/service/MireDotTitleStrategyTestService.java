@@ -19,8 +19,9 @@ public interface MireDotTitleStrategyTestService {
     /**
      * The first sentence will be used as the title of this interface.
      * <title>
-     *     <strategy>firstsentence</strategy>
+     * <strategy>firstsentence</strategy>
      * </title>
+     *
      * @return A number
      */
     @Path("firstsentence")
@@ -30,10 +31,11 @@ public interface MireDotTitleStrategyTestService {
     /**
      * The content from the @title tag will be the title of this interface.
      * <title>
-     *     <strategy>tag: title</strategy>
+     * <strategy>tag: title</strategy>
      * </title>
-     * @title The title from the @title tag.
+     *
      * @return A number
+     * @title The title from the @title tag.
      */
     @Path("titletag")
     @GET
@@ -42,11 +44,12 @@ public interface MireDotTitleStrategyTestService {
     /**
      * The content from the @summary tag will be the title of this interface.
      * <title>
-     *     <strategy>tag: summary</strategy>
+     * <strategy>tag: summary</strategy>
      * </title>
+     *
+     * @return A number
      * @title The title from the @title tag
      * @summary The title from the @summary tag.
-     * @return A number
      */
     @Path("summarytag")
     @GET

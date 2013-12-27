@@ -12,8 +12,8 @@ import java.util.List;
 @XmlRootElement
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.PROPERTY, property = "subCategory")
 @JsonSubTypes({
-       @JsonSubTypes.Type(name = "dogs", value = DogCategory.class),
-       @JsonSubTypes.Type(name = "cats", value = CatCategory.class)
+        @JsonSubTypes.Type(name = "dogs", value = DogCategory.class),
+        @JsonSubTypes.Type(name = "cats", value = CatCategory.class)
 })
 public class Category {
 
