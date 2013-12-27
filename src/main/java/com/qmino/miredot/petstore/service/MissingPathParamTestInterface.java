@@ -20,7 +20,8 @@ import javax.ws.rs.core.MediaType;
 public interface MissingPathParamTestInterface {
     /**
      * The {secondparam} has been forgotten in the path.
-     * @param first the first param, included in the path
+     *
+     * @param first  the first param, included in the path
      * @param second the second param, forgotten in the path
      * @return Een string.
      */
@@ -31,6 +32,7 @@ public interface MissingPathParamTestInterface {
 
     /**
      * This should work without problems.
+     *
      * @param interfacepath a path param defined in the interface path
      * @return Een string.
      */
