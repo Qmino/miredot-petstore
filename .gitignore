@@ -9,3 +9,5 @@ target/*
 # IDE Files #
 .idea/*
 *.iml
+*.ipr
+*.iws
