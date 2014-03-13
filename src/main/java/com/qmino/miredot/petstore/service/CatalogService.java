@@ -37,7 +37,7 @@ public interface CatalogService {
     public List<Category> findAllCategories();
 
     /**
-     * Get the category with the specified {@param categoryId}.
+     * Get the category with the specified category id.
      *
      * @param categoryId The category id
      * @return The category with the specified id
