@@ -43,6 +43,9 @@ public class Order {
     // =              Public Methods        =
     // ======================================
 
+    /**
+     * @return Total price of this order.
+     */
     public Float getTotal() {
         if (orderLines == null || orderLines.isEmpty())
             return 0f;
@@ -81,10 +84,16 @@ public class Order {
         return orderLines;
     }
 
+    /**
+     * @param orderLines The individual items in this order.
+     */
     public void setOrderLines(List<OrderLine> orderLines) {
         this.orderLines = orderLines;
     }
 
+    /**
+     * @return The delivery address if there is one.
+     */
     public Address getDeliveryAddress() {
         return deliveryAddress;
     }
