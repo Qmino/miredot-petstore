@@ -6,7 +6,7 @@
     <groupId>com.qmino</groupId>
     <artifactId>miredot-petstore</artifactId>
 
-    <version>1.2.0.0</version>
+    <version>1.4</version>
     <name>MireDot Petstore</name>
 
     <organization>
@@ -65,7 +65,7 @@
             <plugin>
                 <groupId>com.qmino</groupId>
                 <artifactId>miredot-maven-plugin</artifactId>
-                <version>1.4-SNAPSHOT</version>
+                <version>1.4</version>
                 <executions>
                     <execution>
                         <goals>
@@ -77,59 +77,67 @@
                     <licence>
                         UHJvZHVjdHxjb20ucW1pbm8ubWlyZWRvdC1wZXRzdG9yZXwyMDE0LTA1LTE5I01Dd0NGQWNrOWVQZ25Rdk80dWYxd0JaL0RMZ0M2Tm4vQWhRMVRETG96QVlydGU5WU5JY2NyY05Od3VmQkRBPT0=
                     </licence>
-                    <statusCodes>
-                        <statusCode>
-                            <httpCode>200</httpCode>
-                            <document>always</document>
-                            <defaultMessage>The service call has completed successfully.</defaultMessage>
-                        </statusCode>
-                        <statusCode>
-                            <httpCode>401</httpCode>
-                            <document>explicit: com.qmino.miredot.petstore.exceptions.AuthorizationException</document>
-                            <defaultMessage>The user is logged in, but is not authorized to use this service.
-                            </defaultMessage>
-                        </statusCode>
-                        <statusCode>
-                            <httpCode>412</httpCode>
-                            <document>put,post</document>
-                            <defaultMessage>Invalid JSON/XML input.</defaultMessage>
-                        </statusCode>
-                        <statusCode>
-                            <httpCode>500</httpCode>
-                            <document>always</document>
-                            <defaultMessage>Internal server exception. The service call did not succeed.
-                            </defaultMessage>
-                        </statusCode>
-                    </statusCodes>
-                    <issueHandling>
-                        <JAVADOC_MISSING_SUMMARY>warn</JAVADOC_MISSING_SUMMARY>
-                        <JAVADOC_MISSING_INTERFACEDOCUMENTATION>warn</JAVADOC_MISSING_INTERFACEDOCUMENTATION>
-                        <JAVADOC_MISSING_PARAMETER_DOCUMENTATION>warn</JAVADOC_MISSING_PARAMETER_DOCUMENTATION>
-                        <JAVADOC_MISSING_EXCEPTION_DOCUMENTATION>warn</JAVADOC_MISSING_EXCEPTION_DOCUMENTATION>
-                        <JAVADOC_MISSING_AUTHORS>warn</JAVADOC_MISSING_AUTHORS>
-                        <JAXRS_MISSING_PRODUCES>warn</JAXRS_MISSING_PRODUCES>
-                        <JAXRS_MISSING_CONSUMES>warn</JAXRS_MISSING_CONSUMES>
-                        <REST_UNMAPPED_EXCEPTION>warn</REST_UNMAPPED_EXCEPTION>
-                    </issueHandling>
-                    <htmlIntro> <!-- default = project_root/miredot.htmlintro.html -->
-                        petstoreRestApi.html
-                    </htmlIntro>
-                    <visibility>
-                        <GETTER>PUBLIC_ONLY</GETTER>
-                        <IS_GETTER>PUBLIC_ONLY</IS_GETTER>
-                        <SETTER>NON_PRIVATE</SETTER>
-                        <CREATOR>PUBLIC_ONLY</CREATOR>
-                        <FIELD>PUBLIC_ONLY</FIELD>
-                    </visibility>
-                    <title>
-                        <strategy>tag: summary</strategy>
-                        <strategy>tag: title</strategy>
-                        <strategy>firstsentence</strategy>
-                    </title>
-                    <outputFormats>
-                        <outputFormat>Html</outputFormat>
-                        <outputFormat>Docx</outputFormat>
-                    </outputFormats>
+                    <restModel>
+                        <httpStatusCodes>
+                            <statusCode>
+                                <httpCode>200</httpCode>
+                                <document>always</document>
+                                <defaultMessage>The service call has completed successfully.</defaultMessage>
+                            </statusCode>
+                            <statusCode>
+                                <httpCode>401</httpCode>
+                                <document>explicit: com.qmino.miredot.petstore.exceptions.AuthorizationException</document>
+                                <defaultMessage>The user is logged in, but is not authorized to use this service.
+                                </defaultMessage>
+                            </statusCode>
+                            <statusCode>
+                                <httpCode>412</httpCode>
+                                <document>put,post</document>
+                                <defaultMessage>Invalid JSON/XML input.</defaultMessage>
+                            </statusCode>
+                            <statusCode>
+                                <httpCode>500</httpCode>
+                                <document>always</document>
+                                <defaultMessage>Internal server exception. The service call did not succeed.
+                                </defaultMessage>
+                            </statusCode>
+                        </httpStatusCodes>
+                        <fieldVisibility>
+                            <GETTER>PUBLIC_ONLY</GETTER>
+                            <IS_GETTER>PUBLIC_ONLY</IS_GETTER>
+                            <SETTER>NON_PRIVATE</SETTER>
+                            <CREATOR>PUBLIC_ONLY</CREATOR>
+                            <FIELD>PUBLIC_ONLY</FIELD>
+                        </fieldVisibility>
+                        <titleNamingStrategies>
+                            <strategy>tag: summary</strategy>
+                            <strategy>tag: title</strategy>
+                            <strategy>firstsentence</strategy>
+                        </titleNamingStrategies>
+                    </restModel>
+                    <analysis>
+                        <checks>
+                            <JAVADOC_MISSING_SUMMARY>warn</JAVADOC_MISSING_SUMMARY>
+                            <JAVADOC_MISSING_INTERFACEDOCUMENTATION>warn</JAVADOC_MISSING_INTERFACEDOCUMENTATION>
+                            <JAVADOC_MISSING_PARAMETER_DOCUMENTATION>warn</JAVADOC_MISSING_PARAMETER_DOCUMENTATION>
+                            <JAVADOC_MISSING_EXCEPTION_DOCUMENTATION>warn</JAVADOC_MISSING_EXCEPTION_DOCUMENTATION>
+                            <JAVADOC_MISSING_AUTHORS>warn</JAVADOC_MISSING_AUTHORS>
+                            <JAXRS_MISSING_PRODUCES>warn</JAXRS_MISSING_PRODUCES>
+                            <JAXRS_MISSING_CONSUMES>warn</JAXRS_MISSING_CONSUMES>
+                            <REST_UNMAPPED_EXCEPTION>warn</REST_UNMAPPED_EXCEPTION>
+                        </checks>
+                    </analysis>
+                    <output>
+                        <html>
+                            <intro> <!-- default = project_root/miredot.htmlintro.html -->
+                                petstoreRestApi.html
+                            </intro>
+                            <baseUrl>
+                                http://mydomain.com/
+                            </baseUrl>
+                        </html>
+                        <docx></docx>
+                    </output>
                 </configuration>
             </plugin>
             <plugin>

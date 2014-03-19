@@ -73,10 +73,16 @@ public class Customer implements Serializable {
         return id;
     }
 
+    /**
+     * @return The unique customer id.
+     */
     public String getLogin() {
         return login;
     }
 
+    /**
+     * @param login Unique customer id.
+     */
     public void setLogin(String login) {
         this.login = login;
     }
@@ -109,6 +115,9 @@ public class Customer implements Serializable {
         return telephone;
     }
 
+    /**
+     * @param telephone Preferably with country code.
+     */
     public void setTelephone(String telephone) {
         this.telephone = telephone;
     }

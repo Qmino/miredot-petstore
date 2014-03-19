@@ -57,10 +57,16 @@ public class Item implements HasUnitCost {
         this.unitCost = unitCost;
     }
 
+    /**
+     * @return URL that refers to an image for the item.
+     */
     public String getImagePath() {
         return imagePath;
     }
 
+    /**
+     * @param imagePath URL that refers to an image for the item.
+     */
     public void setImagePath(String imagePath) {
         this.imagePath = imagePath;
     }
@@ -73,10 +79,16 @@ public class Item implements HasUnitCost {
         this.product = product;
     }
 
+    /**
+     * @return An item-specific description
+     */
     public String getDescription() {
         return description;
     }
 
+    /**
+     * @param description An item-specific description
+     */
     public void setDescription(String description) {
         this.description = description;
     }

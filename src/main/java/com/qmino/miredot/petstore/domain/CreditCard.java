@@ -31,6 +31,9 @@ public class CreditCard {
         return creditCardNumber;
     }
 
+    /**
+     * @param creditCardNumber Number without spaces
+     */
     public void setCreditCardNumber(String creditCardNumber) {
         this.creditCardNumber = creditCardNumber;
     }
@@ -43,10 +46,16 @@ public class CreditCard {
         this.creditCardType = creditCardType;
     }
 
+    /**
+     * @return Expiration date as MM/YY
+     */
     public String getCreditCardExpDate() {
         return creditCardExpDate;
     }
 
+    /**
+     * @param creditCardExpDate Expiration date as MM/YY
+     */
     public void setCreditCardExpDate(String creditCardExpDate) {
         this.creditCardExpDate = creditCardExpDate;
     }

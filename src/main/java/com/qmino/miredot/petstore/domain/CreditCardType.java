@@ -7,8 +7,8 @@ public enum CreditCardType {
     // ======================================
 
     VISA("VISA"),
-    MASTER_CARD("MASTER,CARD"),
-    AMERICAN_EXPRESS("AMERICAN EXPRESS");
+    MASTER_CARD("MASTER-CARD"),
+    AMERICAN_EXPRESS("AMERICAN-EXPRESS");
 
 
     private String name;
