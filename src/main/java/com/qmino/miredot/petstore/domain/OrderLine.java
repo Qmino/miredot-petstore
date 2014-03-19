@@ -1,5 +1,9 @@
 package com.qmino.miredot.petstore.domain;
 
+/**
+ * One of more instances of a product in an order.
+ * @param <T>
+ */
 public class OrderLine<T extends HasUnitCost> {
 
     // ======================================
@@ -26,6 +30,9 @@ public class OrderLine<T extends HasUnitCost> {
     // =              Public Methods        =
     // ======================================
 
+    /**
+     * @return Total cost of the products in this orderline.
+     */
     public Float getSubTotal() {
         return item.getUnitCost() * quantity;
     }
@@ -38,10 +45,16 @@ public class OrderLine<T extends HasUnitCost> {
         return id;
     }
 
+    /**
+     * @return Number of articles (always > 0)
+     */
     public Integer getQuantity() {
         return quantity;
     }
 
+    /**
+     * @param quantity Number of articles. Must be > 0.
+     */
     public void setQuantity(Integer quantity) {
         this.quantity = quantity;
     }

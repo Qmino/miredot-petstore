@@ -31,34 +31,62 @@ public class Address {
     // =         Getters & setters          =
     // ======================================
 
+    /**
+     * @return The first street line.
+     */
     public String getStreet1() {
         return street1;
     }
 
+    /**
+     * The first street line.
+     * @param street1 First street line.
+     */
     public void setStreet1(String street1) {
         this.street1 = street1;
     }
 
+    /**
+     * @return Second street line.
+     */
     public String getStreet2() {
         return street2;
     }
 
+    /**
+     * The second street line.
+     * @param street2 Second street line.
+     */
     public void setStreet2(String street2) {
         this.street2 = street2;
     }
 
+    /**
+     * @return Full name of the city
+     */
     public String getCity() {
         return city;
     }
 
+    /**
+     * The full name of the city.
+     * @param city Full name of the city.
+     */
     public void setCity(String city) {
         this.city = city;
     }
 
+    /**
+     * @return Full state name.
+     */
     public String getState() {
         return state;
     }
 
+    /**
+     * The full name of the state.
+     * @param state Full state name (if applicable).
+     */
     public void setState(String state) {
         this.state = state;
     }
@@ -71,10 +99,17 @@ public class Address {
         this.zipcode = zipcode;
     }
 
+    /**
+     * @return Full country name.
+     */
     public String getCountry() {
         return country;
     }
 
+    /**
+     * The full country name.
+     * @param country Full country name.  e.g., Belgium
+     */
     public void setCountry(String country) {
         this.country = country;
     }
