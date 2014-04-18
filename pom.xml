@@ -16,6 +16,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <licence>UHJvamVjdHxjb20ucW1pbm8ubWlyZWRvdC1wZXRzdG9yZXwyMDE5LTA0LTE4fHRydWUjTUM0Q0ZRQ0FiaU9EQUJiQUtxekxBcjcwMGRiczRHRmhuZ0lWQUlsUzdlamVoOU9lWGVua215MVVxdkxpOEtCMg==</licence>
     </properties>
 
     <pluginRepositories>
@@ -74,9 +75,7 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <licence>
-                        UHJvamVjdHxjb20ucW1pbm8ubWlyZWRvdC1wZXRzdG9yZXwyMDE5LTA0LTE4fHRydWUjTUM0Q0ZRQ0FiaU9EQUJiQUtxekxBcjcwMGRiczRHRmhuZ0lWQUlsUzdlamVoOU9lWGVua215MVVxdkxpOEtCMg==
-                    </licence>
+                    <licence>${licence}</licence>
                     <restModel>
                         <httpStatusCodes>
                             <statusCode>
