@@ -4,6 +4,9 @@ JAX-RS REST Documentation Test Project
 This project is used to test <a href="http://www.miredot.com">MireDot</a>, a Maven plugin that generates interactive 
 REST documentation based on JAX-RS annotations and javadoc.
 
+The generated documentation can be viewed here: <a href="http://www.miredot.com/exampledocs/">http://www.miredot.com/exampledocs/</a>.
+ 
+
 
 #### Attribution
 
