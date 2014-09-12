@@ -65,8 +65,8 @@
         <plugins>
             <plugin>
                 <groupId>com.qmino</groupId>
-                <artifactId>miredot-maven-plugin</artifactId>
-                <version>1.4.1</version>
+                <artifactId>miredot-plugin</artifactId>
+                <version>1.4</version>
                 <executions>
                     <execution>
                         <goals>
