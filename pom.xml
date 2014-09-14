@@ -6,7 +6,7 @@
     <groupId>com.qmino</groupId>
     <artifactId>miredot-petstore</artifactId>
 
-    <version>1.4</version>
+    <version>1.5</version>
     <name>MireDot Petstore</name>
 
     <organization>
