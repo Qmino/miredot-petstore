@@ -13,6 +13,10 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  * @author <a href="http://www.qmino.com">Qmino bvba</a>
  */
 public class DefaultProduct extends Product {
+
+    /**
+     * Sets if this is a default product.
+     */
     @JsonProperty("default")
     private boolean _default;
 }
