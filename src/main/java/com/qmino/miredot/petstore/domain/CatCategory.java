@@ -11,7 +11,14 @@ package com.qmino.miredot.petstore.domain;
  * @author <a href="http://www.qmino.com">Qmino bvba</a>
  */
 public class CatCategory extends Category {
+    /**
+     * The name of the category.
+     */
     private String name;
+
+    /**
+     * A product that is recommended for this category.
+     */
     private Product recommendedProduct;
 
     public String getName() {

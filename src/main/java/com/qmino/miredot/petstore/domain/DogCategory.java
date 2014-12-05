@@ -11,7 +11,15 @@ package com.qmino.miredot.petstore.domain;
  * @author <a href="http://www.qmino.com">Qmino bvba</a>
  */
 public class DogCategory extends Category {
+
+    /**
+     * The name of the category.
+     */
     private String name;
+
+    /**
+     * The dog food category.
+     */
     private Category dogFoodCategory;
 
     public String getName() {
