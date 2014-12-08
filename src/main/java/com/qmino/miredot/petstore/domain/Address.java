@@ -91,10 +91,16 @@ public class Address {
         this.state = state;
     }
 
+    /**
+     * @return The zip code
+     */
     public String getZipcode() {
         return zipcode;
     }
 
+    /**
+     * @param zipcode The zip code
+     */
     public void setZipcode(String zipcode) {
         this.zipcode = zipcode;
     }

@@ -64,22 +64,37 @@ public class Order {
     // =         Getters & setters          =
     // ======================================
 
+    /**
+     * @return The unique id.
+     */
     public Long getId() {
         return id;
     }
 
+    /**
+     * @return The date this order was placed
+     */
     public Date getOrderDate() {
         return orderDate;
     }
 
+    /**
+     * @return The customer that placed the order
+     */
     public Customer getCustomer() {
         return customer;
     }
 
+    /**
+     * @param customer The customer that placed the order
+     */
     public void setCustomer(Customer customer) {
         this.customer = customer;
     }
 
+    /**
+     * @return Items in the order
+     */
     public List<OrderLine> getOrderLines() {
         return orderLines;
     }
@@ -98,38 +113,65 @@ public class Order {
         return deliveryAddress;
     }
 
+    /**
+     * @param deliveryAddress The delivery address
+     */
     public void setDeliveryAddress(Address deliveryAddress) {
         this.deliveryAddress = deliveryAddress;
     }
 
+    /**
+     * @return The credit card info.
+     */
     public CreditCard getCreditCard() {
         return creditCard;
     }
 
+    /**
+     * @param creditCard The credit card info
+     */
     public void setCreditCard(CreditCard creditCard) {
         this.creditCard = creditCard;
     }
 
+    /**
+     * @return The credit card number
+     */
     public String getCreditCardNumber() {
         return creditCard.getCreditCardNumber();
     }
 
+    /**
+     * @param creditCardNumber The credit card number
+     */
     public void setCreditCardNumber(String creditCardNumber) {
         creditCard.setCreditCardNumber(creditCardNumber);
     }
 
+    /**
+     * @return The type of credit card
+     */
     public CreditCardType getCreditCardType() {
         return creditCard.getCreditCardType();
     }
 
+    /**
+     * @param creditCardType The type of credit card
+     */
     public void setCreditCardType(CreditCardType creditCardType) {
         creditCard.setCreditCardType(creditCardType);
     }
 
+    /**
+     * @return The expiry date of the credit card
+     */
     public String getCreditCardExpiryDate() {
         return creditCard.getCreditCardExpDate();
     }
 
+    /**
+     * @param creditCardExpiryDate The expiry date of the credit card
+     */
     public void setCreditCardExpiryDate(String creditCardExpiryDate) {
         creditCard.setCreditCardExpDate(creditCardExpiryDate);
     }

@@ -37,22 +37,41 @@ public class Item implements HasUnitCost {
     // =         Getters & setters          =
     // ======================================
 
+    /**
+     * @return The unique id.
+     */
     public Long getId() {
         return id;
     }
 
+    /**
+     * @return The name
+     */
     public String getName() {
         return name;
     }
 
+    /**
+     * Sets the name.
+     *
+     * @param name The name
+     */
     public void setName(String name) {
         this.name = name;
     }
 
+    /**
+     * @return The price of one quantity.
+     */
     public Float getUnitCost() {
         return unitCost;
     }
 
+    /**
+     * Sets the unit cost.
+     *
+     * @param unitCost The price of one quantity.
+     */
     public void setUnitCost(Float unitCost) {
         this.unitCost = unitCost;
     }
@@ -71,10 +90,18 @@ public class Item implements HasUnitCost {
         this.imagePath = imagePath;
     }
 
+    /**
+     * @return The product referenced by this item.
+     */
     public Product getProduct() {
         return product;
     }
 
+    /**
+     * Sets the product referenced by this item.
+     *
+     * @param product The product referenced by this item.
+     */
     public void setProduct(Product product) {
         this.product = product;
     }

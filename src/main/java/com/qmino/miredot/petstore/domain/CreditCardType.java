@@ -1,5 +1,8 @@
 package com.qmino.miredot.petstore.domain;
 
+/**
+ * A credit card type.
+ */
 public enum CreditCardType {
 
     // ======================================
