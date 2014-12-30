@@ -1,0 +1,111 @@
+apply plugin: 'java'
+apply plugin: 'maven'
+
+group = 'com.qmino'
+version = '1.5.1'
+
+description = 'MireDot Petstore'
+
+sourceCompatibility = 1.6
+targetCompatibility = 1.6
+
+buildscript {
+    repositories {
+        mavenLocal()
+        maven { url "http://nexus.qmino.com/content/repositories/miredot" }
+        maven { url "http://repo.maven.apache.org/maven2" }
+        maven { url "http://nexus.qmino.com/content/repositories/miredot-snapshots" }
+    }
+    dependencies {
+        classpath 'com.qmino:miredot-plugin:1.5.1'
+    }
+}
+
+repositories {
+    maven { url "http://nexus.qmino.com/content/repositories/miredot" }
+    maven { url "http://repo.maven.apache.org/maven2" }
+}
+dependencies {
+    compile group: 'org.jboss.resteasy', name: 'jaxrs-api', version: '2.3.2.Final'
+    compile group: 'com.qmino', name: 'miredot-annotations', version: '1.3'
+    compile group: 'com.fasterxml.jackson.core', name: 'jackson-annotations', version: '2.2.0'
+
+//    compile group: 'com.qmino', name: 'miredot-maven-plugin', version:'1.4.1-SNAPSHOT'
+}
+
+
+apply plugin: 'java'
+apply plugin: 'miredot'
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.0'
+}
+
+miredot {
+    source = sourceSets.main.allJava
+    destination = sourceSets.main.output
+
+    licence = 'UHJvamVjdHxjb20ucW1pbm8ubWlyZWRvdC1wZXRzdG9yZXwyMDE5LTA0LTE4fHRydWUjTUM0Q0ZRQ0FiaU9EQUJiQUtxekxBcjcwMGRiczRHRmhuZ0lWQUlsUzdlamVoOU9lWGVua215MVVxdkxpOEtCMg=='
+
+    restModel {
+        filter {
+            includes = ['com.qmino.miredot.petstore.service.**', 'include2']
+            excludes = ['exclude']
+        }
+
+        httpStatusCodes {
+            '200' { document = 'always'; defaultMessage = 'The service call has completed successfully.' }
+            '401' {
+                document = 'explicit: com.qmino.miredot.petstore.exceptions.AuthorizationException'
+                defaultMessage = 'The user is logged in, but is not authorized to use this service.'
+            }
+            '412' { document = 'put,post'; defaultMessage = 'Invalid JSON/XML input.' }
+            '500' { document = 'always'; defaultMessage = 'Internal server exception. The service call did not succeed.' }
+        }
+
+        fieldVisibility = [GETTER: 'PUBLIC_ONLY', IS_GETTER: 'PUBLIC_ONLY',
+                           SETTER : 'NON_PRIVATE',
+                           CREATOR : 'PUBLIC_ONLY',
+                           FIELD : 'PUBLIC_ONLY' ]
+
+        titleNamingStrategies = ['tag: summary', 'tag: title', 'firstsentence']
+
+        fieldNamingStrategy = 'Pascal'
+
+        typeReplacement {
+            'float' { target = 'floatnumber'; type = 'literal' }
+            'java.util.Date' { target = 'Seconds since Epoch'; type = 'literal' }
+            'myPackage.Person' { target = 'yourPackage.JsonPerson'; type = 'alternative' }
+        }
+    }
+
+    analysis {
+        checks = [JAVADOC_MISSING_SUMMARY: 'warn',
+                  JAVADOC_MISSING_INTERFACEDOCUMENTATION: 'warn',
+                  JAVADOC_MISSING_PARAMETER_DOCUMENTATION: 'warn',
+                  JAVADOC_MISSING_EXCEPTION_DOCUMENTATION: 'warn',
+                  JAVADOC_MISSING_AUTHORS: 'warn',
+                  JAXRS_MISSING_PRODUCES: 'warn',
+                  JAXRS_MISSING_CONSUMES: 'warn',
+                  REST_UNMAPPED_EXCEPTION: 'warn',
+        ]
+    }
+
+    output {
+        location = '/my/specific/outputdir'
+        formats {
+            'docx' {
+                title = 'docxTitle'
+                location = '/my/specific/msword/outputdir'
+            }
+            'html' {
+                title = 'My Cool Project, version ' + version
+                intro = 'petstoreRestApi.html'
+                baseUrl = 'http://www.gradle.org'
+                location = '/my/specific/html/outputdir'
+                jsonDoc = 'Hidden'
+                initialCollapseLevel = 5
+            }
+        }
+    }
+}
