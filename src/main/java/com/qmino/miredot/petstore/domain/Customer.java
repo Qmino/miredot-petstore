@@ -84,8 +84,6 @@ public class Customer implements Serializable {
     }
 
     /**
-     * Sets the unique customer id.
-     *
      * @param login Unique customer id.
      */
     public void setLogin(String login) {
@@ -100,8 +98,6 @@ public class Customer implements Serializable {
     }
 
     /**
-     * Sets the password of the customer.
-     *
      * @param password The password
      */
     public void setPassword(String password) {
@@ -116,8 +112,6 @@ public class Customer implements Serializable {
     }
 
     /**
-     * Sets the first name.
-     *
      * @param firstname The first name.
      */
     public void setFirstname(String firstname) {
@@ -132,8 +126,6 @@ public class Customer implements Serializable {
     }
 
     /**
-     * Sets the last name.
-     *
      * @param lastname The last name.
      */
     public void setLastname(String lastname) {
@@ -162,8 +154,6 @@ public class Customer implements Serializable {
     }
 
     /**
-     * Sets the email address.
-     *
      * @param email The email address.
      */
     public void setEmail(String email) {
@@ -178,7 +168,8 @@ public class Customer implements Serializable {
     }
 
     /**
-     * Sets the home address.
+     * Sets the home address. This is the complete address with the street, number, zip code, city and optionally the
+     * country.
      *
      * @param homeAddress The home address.
      */
@@ -194,8 +185,6 @@ public class Customer implements Serializable {
     }
 
     /**
-     * Sets the date of birth.
-     *
      * @param dateOfBirth The date of birth.
      */
     public void setDateOfBirth(Date dateOfBirth) {

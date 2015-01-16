@@ -59,8 +59,6 @@ public class Category {
     }
 
     /**
-     * Sets the name of the category.
-     *
      * @param name the new name
      */
     public void setName(String name) {
@@ -75,8 +73,6 @@ public class Category {
     }
 
     /**
-     * Sets the description of the category.
-     *
      * @param description the new description
      */
     public void setDescription(String description) {

@@ -11,7 +11,8 @@ public class CatCategory extends Category {
     private String name;
 
     /**
-     * A product that is recommended for this category.
+     * A product that is recommended for this category. This product is the <strong>best</strong> offer from the entire
+     * catalog for this category.
      */
     private Product recommendedProduct;
 

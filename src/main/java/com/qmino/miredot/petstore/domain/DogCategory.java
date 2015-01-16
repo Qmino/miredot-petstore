@@ -12,7 +12,7 @@ public class DogCategory extends Category {
     private String name;
 
     /**
-     * The dog food category.
+     * The dog food category. This is the dog food that is best suited for dogs of this category.
      */
     private Category dogFoodCategory;
 
