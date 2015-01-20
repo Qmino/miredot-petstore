@@ -11,3 +11,5 @@ target/*
 *.iml
 *.ipr
 *.iws
+build/
+.gradle/
