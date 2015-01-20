@@ -27,6 +27,7 @@ repositories {
 }
 dependencies {
     compile group: 'org.jboss.resteasy', name: 'jaxrs-api', version: '2.3.2.Final'
+    compile group: 'org.jboss.resteasy', name: 'resteasy-jaxrs', version: '3.0.10.Final'
     compile group: 'com.qmino', name: 'miredot-annotations', version: '1.3'
     compile group: 'com.fasterxml.jackson.core', name: 'jackson-annotations', version: '2.2.0'
 
@@ -92,17 +93,17 @@ miredot {
     }
 
     output {
-        location = '/my/specific/outputdir'
+        //location = '/my/specific/outputdir'
         formats {
             'docx' {
                 title = 'docxTitle'
-                location = '/my/specific/msword/outputdir'
+                //location = '/my/specific/msword/outputdir'
             }
             'html' {
                 title = 'My Cool Project, version ' + version
                 intro = 'petstoreRestApi.html'
                 baseUrl = 'http://www.gradle.org'
-                location = '/my/specific/html/outputdir'
+                //location = '/my/specific/html/outputdir'
                 jsonDoc = 'Hidden'
                 initialCollapseLevel = 5
             }
