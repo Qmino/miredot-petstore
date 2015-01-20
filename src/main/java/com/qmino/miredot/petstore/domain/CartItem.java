@@ -30,18 +30,34 @@ public class CartItem {
     // =         Getters & setters          =
     // ======================================
 
+    /**
+     * @return The item in the cart
+     */
     public Item getItem() {
         return item;
     }
 
+    /**
+     * Sets the item in the cart.
+     *
+     * @param item the item
+     */
     public void setItem(Item item) {
         this.item = item;
     }
 
+    /**
+     * @return The quantity of the item in the cart
+     */
     public Integer getQuantity() {
         return quantity;
     }
 
+    /**
+     * Sets the quantity of the item in the cart.
+     *
+     * @param quantity the quantity
+     */
     public void setQuantity(Integer quantity) {
         this.quantity = quantity;
     }

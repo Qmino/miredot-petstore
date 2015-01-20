@@ -39,7 +39,6 @@ public class Address {
     }
 
     /**
-     * The first street line.
      * @param street1 First street line.
      */
     public void setStreet1(String street1) {
@@ -54,7 +53,6 @@ public class Address {
     }
 
     /**
-     * The second street line.
      * @param street2 Second street line.
      */
     public void setStreet2(String street2) {
@@ -69,7 +67,6 @@ public class Address {
     }
 
     /**
-     * The full name of the city.
      * @param city Full name of the city.
      */
     public void setCity(String city) {
@@ -84,17 +81,22 @@ public class Address {
     }
 
     /**
-     * The full name of the state.
      * @param state Full state name (if applicable).
      */
     public void setState(String state) {
         this.state = state;
     }
 
+    /**
+     * @return The zip code
+     */
     public String getZipcode() {
         return zipcode;
     }
 
+    /**
+     * @param zipcode The zip code
+     */
     public void setZipcode(String zipcode) {
         this.zipcode = zipcode;
     }
@@ -107,7 +109,6 @@ public class Address {
     }
 
     /**
-     * The full country name.
      * @param country Full country name.  e.g., Belgium
      */
     public void setCountry(String country) {

@@ -6,6 +6,7 @@ import com.qmino.miredot.petstore.domain.Category;
 import com.qmino.miredot.petstore.domain.Item;
 import com.qmino.miredot.petstore.domain.Product;
 import com.qmino.miredot.petstore.exceptions.AuthorizationException;
+import org.jboss.resteasy.annotations.GZIP;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
@@ -32,6 +33,7 @@ public interface CatalogService {
      * @summary Get all categories
      */
     @GET
+    @GZIP
     @Path("/category")
     @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
     public List<Category> findAllCategories();

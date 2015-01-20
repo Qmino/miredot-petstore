@@ -47,30 +47,51 @@ public class Product {
     // =         Getters & setters          =
     // ======================================
 
+    /**
+     * @return The unique id.
+     */
     public Long getId() {
         return id;
     }
 
+    /**
+     * @return The name
+     */
     public String getName() {
         return name;
     }
 
+    /**
+     * @param name The name
+     */
     public void setName(String name) {
         this.name = name;
     }
 
+    /**
+     * @return The description
+     */
     public String getDescription() {
         return description;
     }
 
+    /**
+     * @param description The description
+     */
     public void setDescription(String description) {
         this.description = description;
     }
 
+    /**
+     * @return The category this product belongs to.
+     */
     public Category getCategory() {
         return category;
     }
 
+    /**
+     * @param category The category this product belongs to.
+     */
     public void setCategory(Category category) {
         this.category = category;
     }
@@ -81,10 +102,16 @@ public class Product {
         items.add(item);
     }
 
+    /**
+     * @return The items
+     */
     public List<Item> getItems() {
         return items;
     }
 
+    /**
+     * @param items The items
+     */
     public void setItems(List<Item> items) {
         this.items = items;
     }
