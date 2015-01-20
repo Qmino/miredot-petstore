@@ -1,12 +1,6 @@
 package com.qmino.miredot.petstore.domain;
 
 /**
- * <p/>
- * <p>
- * <i>Creation-Date</i>: 10/06/13<br>
- * <i>Creation-Time</i>:  19:29<br>
- * </p>
- *
  * @author Jeroen
  * @author <a href="http://www.qmino.com">Qmino bvba</a>
  */
@@ -18,7 +12,7 @@ public class DogCategory extends Category {
     private String name;
 
     /**
-     * The dog food category.
+     * The dog food category. This is the dog food that is best suited for dogs of this category.
      */
     private Category dogFoodCategory;
 

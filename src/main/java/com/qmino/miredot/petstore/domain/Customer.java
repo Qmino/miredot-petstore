@@ -69,6 +69,9 @@ public class Customer implements Serializable {
     // =         Getters & setters          =
     // ======================================
 
+    /**
+     * @return The internal id of the customer
+     */
     public Long getId() {
         return id;
     }
@@ -87,66 +90,110 @@ public class Customer implements Serializable {
         this.login = login;
     }
 
+    /**
+     * @return The password of the customer
+     */
     public String getPassword() {
         return password;
     }
 
+    /**
+     * @param password The password
+     */
     public void setPassword(String password) {
         this.password = password;
     }
 
+    /**
+     * @return The first name.
+     */
     public String getFirstname() {
         return firstname;
     }
 
+    /**
+     * @param firstname The first name.
+     */
     public void setFirstname(String firstname) {
         this.firstname = firstname;
     }
 
+    /**
+     * @return The last name.
+     */
     public String getLastname() {
         return lastname;
     }
 
+    /**
+     * @param lastname The last name.
+     */
     public void setLastname(String lastname) {
         this.lastname = lastname;
     }
 
+    /**
+     * @return The telephone number.
+     */
     public String getTelephone() {
         return telephone;
     }
 
     /**
-     * @param telephone Preferably with country code.
+     * @param telephone The telephone number, preferably with country code.
      */
     public void setTelephone(String telephone) {
         this.telephone = telephone;
     }
 
+    /**
+     * @return The email address.
+     */
     public String getEmail() {
         return email;
     }
 
+    /**
+     * @param email The email address.
+     */
     public void setEmail(String email) {
         this.email = email;
     }
 
-
+    /**
+     * @return The home address.
+     */
     public Address getHomeAddress() {
         return homeAddress;
     }
 
+    /**
+     * Sets the home address. This is the complete address with the street, number, zip code, city and optionally the
+     * country.
+     *
+     * @param homeAddress The home address.
+     */
     public void setHomeAddress(Address homeAddress) {
         this.homeAddress = homeAddress;
     }
 
+    /**
+     * @return The date of birth.
+     */
     public Date getDateOfBirth() {
         return dateOfBirth;
     }
 
+    /**
+     * @param dateOfBirth The date of birth.
+     */
     public void setDateOfBirth(Date dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
     }
 
+    /**
+     * @return The age, calculated from the date of birth.
+     */
     public Integer getAge() {
         return age;
     }
