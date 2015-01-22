@@ -41,6 +41,9 @@ public class OrderLine<T extends HasUnitCost> {
     // =         Getters & setters          =
     // ======================================
 
+    /**
+     * @return The unique id.
+     */
     public Long getId() {
         return id;
     }
@@ -59,10 +62,16 @@ public class OrderLine<T extends HasUnitCost> {
         this.quantity = quantity;
     }
 
+    /**
+     * @return The item that this order line represents.
+     */
     public T getItem() {
         return item;
     }
 
+    /**
+     * @param item The item that this order line represents.
+     */
     public void setItem(T item) {
         this.item = item;
     }

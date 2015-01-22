@@ -27,21 +27,34 @@ public class CreditCard {
     // =         Getters & setters          =
     // ======================================
 
+    /**
+     * @return The credit card number
+     */
     public String getCreditCardNumber() {
         return creditCardNumber;
     }
 
     /**
+     * Sets the credit card number.
+     *
      * @param creditCardNumber Number without spaces
      */
     public void setCreditCardNumber(String creditCardNumber) {
         this.creditCardNumber = creditCardNumber;
     }
 
+    /**
+     * @return The type of the credit card
+     */
     public CreditCardType getCreditCardType() {
         return creditCardType;
     }
 
+    /**
+     * Sets the type of the credit card.
+     *
+     * @param creditCardType the new type
+     */
     public void setCreditCardType(CreditCardType creditCardType) {
         this.creditCardType = creditCardType;
     }
@@ -54,6 +67,8 @@ public class CreditCard {
     }
 
     /**
+     * Sets the expiration date.
+     *
      * @param creditCardExpDate Expiration date as MM/YY
      */
     public void setCreditCardExpDate(String creditCardExpDate) {

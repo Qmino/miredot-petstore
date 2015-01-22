@@ -6,7 +6,7 @@
     <groupId>com.qmino</groupId>
     <artifactId>miredot-petstore</artifactId>
 
-    <version>1.4</version>
+    <version>1.5.1</version>
     <name>MireDot Petstore</name>
 
     <organization>
@@ -14,10 +14,9 @@
     </organization>
 
     <properties>
-        <baseUrl></baseUrl>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <licence>UHJvamVjdHxjb20ucW1pbm8ubWlyZWRvdC1wZXRzdG9yZXwyMDE2LTA4LTI4fHRydWUjTUMwQ0ZRQ1N4ZUM4UENuMkc3eXJ4ajdhQlpjTC9CTlQ1Z0lVSjF0U2JuQm50d20zU1ptN2NrSkVTWFZxQXFZPQ==</licence>
+        <licence>UHJvamVjdHxjb20ucW1pbm8ubWlyZWRvdC1wZXRzdG9yZXwyMDE5LTA0LTE4fHRydWUjTUM0Q0ZRQ0FiaU9EQUJiQUtxekxBcjcwMGRiczRHRmhuZ0lWQUlsUzdlamVoOU9lWGVua215MVVxdkxpOEtCMg==</licence>
     </properties>
 
     <pluginRepositories>
@@ -63,7 +62,7 @@
         <dependency>
             <groupId>org.jboss.resteasy</groupId>
             <artifactId>resteasy-jaxrs</artifactId>
-            <version>2.3.7.Final</version>
+            <version>3.0.10.Final</version>
         </dependency>
     </dependencies>
 
@@ -71,8 +70,8 @@
         <plugins>
             <plugin>
                 <groupId>com.qmino</groupId>
-                <artifactId>miredot-maven-plugin</artifactId>
-                <version>1.5.0-SNAPSHOT</version>
+                <artifactId>miredot-plugin</artifactId>
+                <version>1.5.1</version>
                 <executions>
                     <execution>
                         <goals>

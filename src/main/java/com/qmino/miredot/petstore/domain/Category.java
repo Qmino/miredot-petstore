@@ -44,22 +44,37 @@ public class Category {
     // =         Getters & setters          =
     // ======================================
 
+    /**
+     * @return The id of the category
+     */
     public Long getId() {
         return id;
     }
 
+    /**
+     * @return The name of the category
+     */
     public String getName() {
         return name;
     }
 
+    /**
+     * @param name the new name
+     */
     public void setName(String name) {
         this.name = name;
     }
 
+    /**
+     * @return The description of the category.
+     */
     public String getDescription() {
         return description;
     }
 
+    /**
+     * @param description the new description
+     */
     public void setDescription(String description) {
         this.description = description;
     }
