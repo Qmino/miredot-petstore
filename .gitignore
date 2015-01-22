@@ -11,3 +11,7 @@ target/*
 *.iml
 *.ipr
 *.iws
+
+# Build files #
+.gradle
+build
