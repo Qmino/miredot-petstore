@@ -6,7 +6,7 @@
     <groupId>com.qmino</groupId>
     <artifactId>miredot-petstore</artifactId>
 
-    <version>1.5</version>
+    <version>1.5.1</version>
     <name>MireDot Petstore</name>
 
     <organization>
@@ -48,7 +48,7 @@
         <dependency>
             <groupId>org.jboss.resteasy</groupId>
             <artifactId>jaxrs-api</artifactId>
-            <version>2.3.2.Final</version>
+            <version>3.0.8.Final</version>
         </dependency>
         <dependency>
             <groupId>com.qmino</groupId>
