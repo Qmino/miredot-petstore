@@ -17,7 +17,7 @@ buildscript {
         maven { url "http://nexus.qmino.com/content/repositories/miredot-snapshots" }
     }
     dependencies {
-        classpath 'com.qmino:miredot-plugin:1.5.1'
+        classpath "com.qmino:miredot-plugin:${miredotVersion}"
     }
 }
 
@@ -30,7 +30,8 @@ dependencies {
     compile group: 'org.jboss.resteasy', name: 'resteasy-jaxrs', version: '3.0.10.Final'
     compile group: 'com.qmino', name: 'miredot-annotations', version: '1.3'
     compile group: 'com.fasterxml.jackson.core', name: 'jackson-annotations', version: '2.2.0'
-
+    compile group: 'javax.servlet', name: 'javax.servlet-api', version: '3.1.0'
+    
 //    compile group: 'com.qmino', name: 'miredot-maven-plugin', version:'1.4.1-SNAPSHOT'
 }
 
@@ -46,7 +47,7 @@ miredot {
     source = sourceSets.main.allJava
     destination = sourceSets.main.output
 
-    licence = 'UHJvamVjdHxjb20ucW1pbm8ubWlyZWRvdC1wZXRzdG9yZXwyMDE5LTA0LTE4fHRydWUjTUM0Q0ZRQ0FiaU9EQUJiQUtxekxBcjcwMGRiczRHRmhuZ0lWQUlsUzdlamVoOU9lWGVua215MVVxdkxpOEtCMg=='
+    licence = "${licenceKey}"
 
     restModel {
         filter {
@@ -93,17 +94,17 @@ miredot {
     }
 
     output {
-        //location = '/my/specific/outputdir'
+        location = 'outputdir'
         formats {
             'docx' {
                 title = 'docxTitle'
-                //location = '/my/specific/msword/outputdir'
+                //location = 'docxoutputdir'
             }
             'html' {
                 title = 'My Cool Project, version ' + version
                 intro = 'petstoreRestApi.html'
                 baseUrl = 'http://www.gradle.org'
-                //location = '/my/specific/html/outputdir'
+                //location = 'htmloutputdir'
                 jsonDoc = 'Hidden'
                 initialCollapseLevel = 5
             }
