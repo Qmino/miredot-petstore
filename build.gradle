@@ -94,7 +94,7 @@ miredot {
     }
 
     output {
-        location = 'outputdir'
+        //location = 'outputdir'
         formats {
             'docx' {
                 title = 'docxTitle'
