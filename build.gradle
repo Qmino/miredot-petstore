@@ -2,7 +2,7 @@ apply plugin: 'java'
 apply plugin: 'maven'
 
 group = 'com.qmino'
-version = '1.5.1'
+version = '1.6.0'
 
 description = 'MireDot Petstore'
 
