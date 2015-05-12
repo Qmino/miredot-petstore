@@ -84,28 +84,28 @@
                     <licence>${licence}</licence>
                     <restModel>
                         <httpStatusCodes>
-                            <statusCode>
+                            <httpStatusCode>
                                 <httpCode>200</httpCode>
                                 <document>always</document>
                                 <defaultMessage>The service call has completed successfully.</defaultMessage>
-                            </statusCode>
-                            <statusCode>
+                            </httpStatusCode>
+                            <httpStatusCode>
                                 <httpCode>401</httpCode>
                                 <document>explicit: com.qmino.miredot.petstore.exceptions.AuthorizationException</document>
                                 <defaultMessage>The user is logged in, but is not authorized to use this service.
                                 </defaultMessage>
-                            </statusCode>
-                            <statusCode>
+                            </httpStatusCode>
+                            <httpStatusCode>
                                 <httpCode>412</httpCode>
                                 <document>put,post</document>
                                 <defaultMessage>Invalid JSON/XML input.</defaultMessage>
-                            </statusCode>
-                            <statusCode>
+                            </httpStatusCode>
+                            <httpStatusCode>
                                 <httpCode>500</httpCode>
                                 <document>always</document>
                                 <defaultMessage>Internal server exception. The service call did not succeed.
                                 </defaultMessage>
-                            </statusCode>
+                            </httpStatusCode>
                         </httpStatusCodes>
                         <fieldVisibility>
                             <GETTER>PUBLIC_ONLY</GETTER>
