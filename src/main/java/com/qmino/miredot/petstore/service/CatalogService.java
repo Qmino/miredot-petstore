@@ -4,6 +4,7 @@ import com.qmino.miredot.annotations.BodyType;
 import com.qmino.miredot.annotations.ReturnType;
 import com.qmino.miredot.petstore.domain.Category;
 import com.qmino.miredot.petstore.domain.Item;
+import com.qmino.miredot.petstore.domain.ItemPatch;
 import com.qmino.miredot.petstore.domain.Product;
 import com.qmino.miredot.petstore.exceptions.AuthorizationException;
 import org.jboss.resteasy.annotations.GZIP;
@@ -187,6 +188,17 @@ public interface CatalogService {
     public void updateItem(@PathParam("id") Long itemId, Item item);
 
     /**
+     * Replaces the given field of an item with the given value.
+     *
+     * @param id    the id of the item
+     * @param patch the patch that will be applied
+     */
+    @PATCH
+    @Path("/item/{id}")
+    @Consumes(MediaType.APPLICATION_JSON)
+    public void patchItem(@PathParam("id") long id, ItemPatch patch);
+
+    /**
      * Deletes item with given id.
      *
      * @param itemId The id of the item to be deleted
@@ -195,6 +207,17 @@ public interface CatalogService {
     @DELETE
     @Path("/item/{id}")
     public void removeItem(@PathParam("id") Long itemId);
+
+    /**
+     * Returns the allowed HTTP methods in the Allow header.
+     * @param id the id
+     * @return an empty body
+     * @responseheader Allow the allowed HTTP methods
+     */
+    @OPTIONS
+    @Path("/item/{id}")
+    @ReturnType("java.lang.Void")
+    public Response itemOptions(@PathParam("id") long id);
 
     /**
      * Illustrating the usage of {@code @ReturnType}
