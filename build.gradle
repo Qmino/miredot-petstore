@@ -47,7 +47,7 @@ miredot {
     source = sourceSets.main.allJava
     destination = sourceSets.main.output
 
-    licence = "${licenceKey}"
+    license = "${licenseKey}"
 
     restModel {
         filter {

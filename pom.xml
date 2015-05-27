@@ -16,8 +16,8 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <licence>UHJvamVjdHxjb20ucW1pbm8ubWlyZWRvdC1wZXRzdG9yZXwyMDE5LTA0LTE4fHRydWUjTUM0Q0ZRQ0FiaU9EQUJiQUtxekxBcjcwMGRiczRHRmhuZ0lWQUlsUzdlamVoOU9lWGVua215MVVxdkxpOEtCMg==</licence>
-        <miredot.version>1.6.0</miredot.version>
+        <license>UHJvamVjdHxjb20ucW1pbm8ubWlyZWRvdC1wZXRzdG9yZXwyMDE5LTA0LTE4fHRydWUjTUM0Q0ZRQ0FiaU9EQUJiQUtxekxBcjcwMGRiczRHRmhuZ0lWQUlsUzdlamVoOU9lWGVua215MVVxdkxpOEtCMg==</license>
+        <miredot.version>1.7.0</miredot.version>
     </properties>
 
     <pluginRepositories>
@@ -81,7 +81,7 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <licence>${licence}</licence>
+                    <license>${license}</license>
                     <restModel>
                         <httpStatusCodes>
                             <httpStatusCode>
