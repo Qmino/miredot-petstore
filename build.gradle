@@ -11,7 +11,6 @@ targetCompatibility = 1.6
 
 buildscript {
     repositories {
-        mavenLocal()
         maven { url "http://nexus.qmino.com/content/repositories/miredot" }
         maven { url "http://repo.maven.apache.org/maven2" }
         maven { url "http://nexus.qmino.com/content/repositories/miredot-snapshots" }
