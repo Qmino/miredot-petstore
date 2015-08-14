@@ -6,7 +6,7 @@
     <groupId>com.qmino</groupId>
     <artifactId>miredot-petstore</artifactId>
 
-    <version>1.6.1</version>
+    <version>1.6.2</version>
     <name>MireDot Petstore</name>
 
     <organization>
@@ -16,8 +16,8 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <licence>UHJvamVjdHxjb20ucW1pbm8ubWlyZWRvdC1wZXRzdG9yZXwyMDE5LTA0LTE4fHRydWUjTUM0Q0ZRQ0FiaU9EQUJiQUtxekxBcjcwMGRiczRHRmhuZ0lWQUlsUzdlamVoOU9lWGVua215MVVxdkxpOEtCMg==</licence>
-        <miredot.version>1.6.1</miredot.version>
+        <license>UHJvamVjdHxjb20ucW1pbm8ubWlyZWRvdC1wZXRzdG9yZXwyMDE5LTA0LTE4fHRydWUjTUM0Q0ZRQ0FiaU9EQUJiQUtxekxBcjcwMGRiczRHRmhuZ0lWQUlsUzdlamVoOU9lWGVua215MVVxdkxpOEtCMg==</license>
+        <miredot.version>1.6.2</miredot.version>
     </properties>
 
     <pluginRepositories>
@@ -53,7 +53,7 @@
         <dependency>
             <groupId>com.qmino</groupId>
             <artifactId>miredot-annotations</artifactId>
-            <version>1.3</version>
+            <version>1.4.0</version>
         </dependency>
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
@@ -81,7 +81,7 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <licence>${licence}</licence>
+                    <license>${license}</license>
                     <restModel>
                         <httpStatusCodes>
                             <httpStatusCode>
