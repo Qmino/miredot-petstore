@@ -17,7 +17,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <license>UHJvamVjdHxjb20ucW1pbm8ubWlyZWRvdC1wZXRzdG9yZXwyMDE5LTA0LTE4fHRydWUjTUM0Q0ZRQ0FiaU9EQUJiQUtxekxBcjcwMGRiczRHRmhuZ0lWQUlsUzdlamVoOU9lWGVua215MVVxdkxpOEtCMg==</license>
-        <miredot.version>1.6.2</miredot.version>
+        <miredot.version>2.1-SNAPSHOT</miredot.version>
     </properties>
 
     <pluginRepositories>
@@ -34,7 +34,34 @@
             <name>MireDot Snapshots</name>
             <url>http://nexus.qmino.com/content/repositories/miredot-snapshots</url>
         </pluginRepository>
+        <pluginRepository>
+            <id>apache-snapshot</id>
+            <name>Apache Snapshot Repository</name>
+            <url>https://repository.apache.org/content/repositories/snapshots</url>
+            <layout>default</layout>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+            <releases>
+                <updatePolicy>always</updatePolicy>
+            </releases>
+        </pluginRepository>
+        <pluginRepository>
+            <id>plexus-snapshot</id>
+            <name>Plexus Snapshot Repository</name>
+            <url>https://oss.sonatype.org/content/repositories/plexus-snapshots</url>
+            <layout>default</layout>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+            <releases>
+                <updatePolicy>always</updatePolicy>
+            </releases>
+        </pluginRepository>
     </pluginRepositories>
+
+
+
 
     <repositories>
         <repository>
@@ -64,6 +91,11 @@
             <groupId>org.jboss.resteasy</groupId>
             <artifactId>resteasy-jaxrs</artifactId>
             <version>3.0.10.Final</version>
+        </dependency>
+        <dependency>
+            <groupId>io.swagger</groupId>
+            <artifactId>swagger-jaxrs</artifactId>
+            <version>1.5.0</version>
         </dependency>
     </dependencies>
 
@@ -148,10 +180,14 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>2.5.1</version>
+                <version>3.6-jigsaw-SNAPSHOT</version>
                 <configuration>
-                    <source>1.6</source>
-                    <target>1.6</target>
+                    <source>9</source>
+                    <target>9</target>
+                    <compilerArgs>
+                        <args>--add-modules</args>
+                        <args>java.xml.bind</args>
+                    </compilerArgs>
                 </configuration>
             </plugin>
         </plugins>
