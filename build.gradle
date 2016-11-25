@@ -2,7 +2,7 @@ apply plugin: 'java'
 apply plugin: 'maven'
 
 group = 'com.qmino'
-version = '1.6.2'
+version = '2.0'
 
 description = 'MireDot Petstore'
 
@@ -44,7 +44,7 @@ miredot {
     source = sourceSets.main.allJava
     destination = sourceSets.main.output
 
-    licence = "${licenseKey}"
+    license = "${licenseKey}"
 
     restModel {
         filter {
