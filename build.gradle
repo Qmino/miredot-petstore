@@ -11,7 +11,7 @@ targetCompatibility = 1.6
 
 buildscript {
     repositories {
-        maven { url "http://nexus.qmino.com/content/repositories/miredot" }
+        maven { url "http://nexus.qmino.com/content/repositories/miredot/" }
         maven { url "http://repo.maven.apache.org/maven2" }
         maven { url "http://nexus.qmino.com/content/repositories/miredot-snapshots" }
     }
@@ -21,8 +21,9 @@ buildscript {
 }
 
 repositories {
-    maven { url "http://nexus.qmino.com/content/repositories/miredot" }
     maven { url "http://repo.maven.apache.org/maven2" }
+    maven { url "http://nexus.qmino.com/content/repositories/miredot/" }
+    maven { url "http://nexus.qmino.com/content/repositories/miredot-snapshots" }
 }
 dependencies {
     compile group: 'org.jboss.resteasy', name: 'jaxrs-api', version: '2.3.2.Final'
