@@ -6,17 +6,18 @@ version = '2.1.2'
 
 description = 'MireDot Petstore'
 
-sourceCompatibility = 1.6
-targetCompatibility = 1.6
+sourceCompatibility = 11
+targetCompatibility = 11
 
 buildscript {
     repositories {
+        mavenLocal()
         maven { url "http://nexus.qmino.com/content/repositories/miredot/" }
         maven { url "http://repo.maven.apache.org/maven2" }
         maven { url "http://nexus.qmino.com/content/repositories/miredot-snapshots" }
     }
     dependencies {
-        classpath "com.qmino:miredot-plugin:${miredotVersion}"
+        classpath "com.qmino:miredot-gradle-plugin:${miredotVersion}"
     }
 }
 
@@ -31,15 +32,13 @@ dependencies {
     compile group: 'com.qmino', name: 'miredot-annotations', version: '1.5.0'
     compile group: 'com.fasterxml.jackson.core', name: 'jackson-annotations', version: '2.2.0'
     compile group: 'javax.servlet', name: 'javax.servlet-api', version: '3.1.0'
+    compile 'javax.xml.bind:jaxb-api:2.3.0'
 }
 
 
 apply plugin: 'java'
 apply plugin: 'miredot'
 
-task wrapper(type: Wrapper) {
-    gradleVersion = '2.0'
-}
 
 miredot {
     source = sourceSets.main.allJava
