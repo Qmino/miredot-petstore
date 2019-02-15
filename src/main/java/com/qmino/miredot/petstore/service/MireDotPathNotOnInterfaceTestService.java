@@ -20,7 +20,7 @@ public interface MireDotPathNotOnInterfaceTestService {
      * This method should be documented, although the interface has no @Path annotation.
      *
      * @return Nothing meaningful.
-     * @summary Test @Path on method, but not on interface
+     * {@summary Test @Path on method, but not on interface}
      */
     @GET
     @Path("/test/path/notoninterface")

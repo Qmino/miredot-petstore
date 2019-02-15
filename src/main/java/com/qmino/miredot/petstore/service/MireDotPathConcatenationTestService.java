@@ -21,7 +21,7 @@ public interface MireDotPathConcatenationTestService {
      * Testing the path concatenation
      *
      * @return Nothing meaningful.
-     * @summary Testing the path concatenation
+     * {@summary Testing the path concatenation}
      */
     @GET
     @Path("path/concatenation")
@@ -32,7 +32,7 @@ public interface MireDotPathConcatenationTestService {
      * Testing the path concatenation with trailing slash
      *
      * @return Nothing meaningful.
-     * @summary Testing the path concatenation
+     * {@summary Testing the path concatenation}
      */
     @GET
     @Path("path/concatenation/trailing/")
@@ -43,7 +43,7 @@ public interface MireDotPathConcatenationTestService {
      * Testing the path concatenation with starting slash
      *
      * @return Nothing meaningful.
-     * @summary Testing the path concatenation
+     * {@summary Testing the path concatenation}
      */
     @GET
     @Path("/path/concatenation/starting")

@@ -31,7 +31,7 @@ public interface CatalogService {
      * Get all categories. See also {@link #findCategory(Long)}
      *
      * @return All categories
-     * @summary Get all categories
+     * {@summary Get all categories}
      */
     @GET
     @GZIP
@@ -44,7 +44,7 @@ public interface CatalogService {
      *
      * @param categoryId The category id
      * @return The category with the specified id
-     * @summary Get the category with the specified id
+     * {@summary Get the category with the specified id}
      */
     @GET
     @Path("/category/{id}")
@@ -55,7 +55,7 @@ public interface CatalogService {
      * Create a new category. Fails if the category name is taken.
      *
      * @param category The category that will be created
-     * @summary Create a new category
+     * {@summary Create a new category}
      */
     @POST
     @Path("/category")
@@ -67,7 +67,7 @@ public interface CatalogService {
      *
      * @param categoryId The id of the category that will be updated
      * @param category   The category details
-     * @summary Update category name and description
+     * {@summary Update category name and description}
      */
     @PUT
     @Path("/category/{id}")
@@ -89,7 +89,7 @@ public interface CatalogService {
      *
      * @param minPrice The minimal price for a product to be included in the result.
      * @return All products
-     * @summary Get all products
+     * {@summary Get all products}
      */
     @GET
     @Path("/product")
@@ -101,7 +101,7 @@ public interface CatalogService {
      *
      * @param productId The product id
      * @return The product with the specified id
-     * @summary Get the product with the specified id
+     * {@summary Get the product with the specified id}
      */
     @GET
     @Path("/product/{id}")
@@ -112,7 +112,7 @@ public interface CatalogService {
      * Create a new product.
      *
      * @param product The product that will be created
-     * @summary Create a new product
+     * {@summary Create a new product}
      */
     @POST
     @Path("/product")
@@ -124,7 +124,7 @@ public interface CatalogService {
      *
      * @param productId The id of the product that will be updated
      * @param product   The product details
-     * @summary Update product name and description
+     * {@summary Update product name and description}
      */
     @PUT
     @Path("/product/{id}")
@@ -135,7 +135,7 @@ public interface CatalogService {
      * Deletes product with given id.
      *
      * @param productId The id of the product to be deleted
-     * @summary Delete product with given id
+     * {@summary Delete product with given id}
      */
     @DELETE
     @Path("/product/{id}")
@@ -145,7 +145,7 @@ public interface CatalogService {
      * Get all items
      *
      * @return All items
-     * @summary Get all items
+     * {@summary Get all items}
      */
     @GET
     @Path("/item")
@@ -157,7 +157,7 @@ public interface CatalogService {
      *
      * @param itemId The item id
      * @return The item with the specified id
-     * @summary Get the item with the specified id
+     * {@summary Get the item with the specified id}
      */
     @GET
     @Path("/item/{id}")
@@ -168,7 +168,7 @@ public interface CatalogService {
      * Create a new item.
      *
      * @param item The item that will be created
-     * @summary Create a new item
+     * {@summary Create a new item}
      */
     @POST
     @Path("/item")
@@ -180,7 +180,7 @@ public interface CatalogService {
      *
      * @param itemId The id of the item that will be updated
      * @param item   The item details
-     * @summary Update item details
+     * {@summary Update item details}
      */
     @PUT
     @Path("/item/{id}")
@@ -202,7 +202,7 @@ public interface CatalogService {
      * Deletes item with given id.
      *
      * @param itemId The id of the item to be deleted
-     * @summary Delete item with given id
+     * {@summary Delete item with given id}
      */
     @DELETE
     @Path("/item/{id}")
@@ -224,7 +224,7 @@ public interface CatalogService {
      *
      * @param itemId The id of the item to get some response from
      * @return A list of MyResponse encapsulated in a javax.ws.rs.core.Response object
-     * @summary @ReturnType usage
+     * {@summary @ReturnType usage}
      */
     @GET
     @Path("/item/response/{id}")
@@ -236,7 +236,7 @@ public interface CatalogService {
      *
      * @param myJson The address.
      * @return A list of MyResponse encapsulated in a javax.ws.rs.core.Response object
-     * @summary @ReturnType(void) and @BodyType usage.
+     * {@summary @ReturnType(void) and @BodyType usage.}
      * @statuscode 201 The item has been created.
      */
     @POST

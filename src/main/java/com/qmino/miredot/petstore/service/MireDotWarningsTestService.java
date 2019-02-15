@@ -7,7 +7,7 @@ import javax.ws.rs.core.MediaType;
 public interface MireDotWarningsTestService {
 
     /**
-     * This method has no @summary tag.
+     * This method has no summary tag.
      *
      * @return Nothing meaningful.
      * @author Jeroen
@@ -21,7 +21,7 @@ public interface MireDotWarningsTestService {
      * This method has no @author tag
      *
      * @return Nothing meaningful.
-     * @summary This method has no @author tag
+     * {@summary This method has no @author tag}
      */
     @GET
     @Path("/missing/author")
@@ -30,7 +30,7 @@ public interface MireDotWarningsTestService {
 
     /**
      * @return Nothing meaningful.
-     * @summary This method has no Interface Documentation
+     * {@summary This method has no Interface Documentation}
      * @author Jeroen
      */
     @GET
@@ -41,7 +41,7 @@ public interface MireDotWarningsTestService {
     /**
      * This method has missing @param and @return tags
      *
-     * @summary This method has missing @param and @return tags
+     * {@summary This method has missing @param and @return tags}
      * @author Jeroen
      */
     @GET
@@ -53,7 +53,7 @@ public interface MireDotWarningsTestService {
      * This method has no @throws tag
      *
      * @return Nothing meaningful.
-     * @summary This method has no @throws tag
+     * {@summary This method has no @throws tag}
      * @author Jeroen
      */
     @GET
@@ -65,7 +65,7 @@ public interface MireDotWarningsTestService {
      * This method has no @Produces annotation
      *
      * @return Nothing meaningful.
-     * @summary This method has no @Produces annotation
+     * {@summary This method has no @Produces annotation}
      * @author Jeroen
      */
     @GET
@@ -76,7 +76,7 @@ public interface MireDotWarningsTestService {
      * This method has no @Consumes annotation
      *
      * @param name Any name will do
-     * @summary This method has no @Consumes annotation
+     * {@summary This method has no @Consumes annotation}
      * @author Jeroen
      */
     @POST

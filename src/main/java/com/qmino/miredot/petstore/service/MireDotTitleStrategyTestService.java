@@ -42,14 +42,14 @@ public interface MireDotTitleStrategyTestService {
     public int titleTag();
 
     /**
-     * The content from the @summary tag will be the title of this interface.
+     * The content from the summary tag will be the title of this interface.
      * <title>
      * <strategy>tag: summary</strategy>
      * </title>
      *
      * @return A number
      * @title The title from the @title tag
-     * @summary The title from the @summary tag.
+     * {@summary The title from the @summary tag.}
      */
     @Path("summarytag")
     @GET
