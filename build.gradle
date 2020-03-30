@@ -12,8 +12,8 @@ targetCompatibility = 1.6
 buildscript {
     repositories {
         maven { url "http://nexus.qmino.com/content/repositories/miredot/" }
-        maven { url "http://repo.maven.apache.org/maven2" }
-        maven { url "http://nexus.qmino.com/content/repositories/miredot-snapshots" }
+        maven { url "https://repo.maven.apache.org/maven2" }
+        maven { url "https://nexus.qmino.com/content/repositories/miredot-snapshots" }
     }
     dependencies {
         classpath "com.qmino:miredot-plugin:${miredotVersion}"
@@ -21,7 +21,7 @@ buildscript {
 }
 
 repositories {
-    maven { url "http://repo.maven.apache.org/maven2" }
+    maven { url "https://repo.maven.apache.org/maven2" }
     maven { url "http://nexus.qmino.com/content/repositories/miredot/" }
     maven { url "http://nexus.qmino.com/content/repositories/miredot-snapshots" }
 }
@@ -33,13 +33,8 @@ dependencies {
     compile group: 'javax.servlet', name: 'javax.servlet-api', version: '3.1.0'
 }
 
-
 apply plugin: 'java'
 apply plugin: 'miredot'
-
-task wrapper(type: Wrapper) {
-    gradleVersion = '2.0'
-}
 
 miredot {
     source = sourceSets.main.allJava
