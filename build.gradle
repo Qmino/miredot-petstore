@@ -13,7 +13,7 @@ buildscript {
     repositories {
         maven { url "http://nexus.qmino.com/content/repositories/miredot/" }
         maven { url "https://repo.maven.apache.org/maven2" }
-        maven { url "https://nexus.qmino.com/content/repositories/miredot-snapshots" }
+        maven { url "http://nexus.qmino.com/content/repositories/miredot-snapshots" }
     }
     dependencies {
         classpath "com.qmino:miredot-plugin:${miredotVersion}"
