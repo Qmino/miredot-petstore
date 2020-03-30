@@ -16,7 +16,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <license>UHJvamVjdHxjb20ucW1pbm8ubWlyZWRvdC1wZXRzdG9yZXwyMDE5LTA0LTE4fHRydWUjTUM0Q0ZRQ0FiaU9EQUJiQUtxekxBcjcwMGRiczRHRmhuZ0lWQUlsUzdlamVoOU9lWGVua215MVVxdkxpOEtCMg==</license>
+        <license>cHJvamVjdHxjb20ucW1pbm8ubWlyZWRvdC1wZXRzdG9yZXwyMDI0LTA1LTAxfHRydWUjTUN3Q0ZIS2RRdWtnanIzbTduL2VvMCt6WGNnZFNkbkVBaFFXZ1BYK1BmQTAxS25ENncwSURSQ2ZsdHNwSlE9PQ==</license>
         <miredot.version>2.1.2</miredot.version>
     </properties>
 
